@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:shared_preferences_demo/load_data.dart';
 import 'package:shared_preferences_demo/outline_button.dart';
 
 class UpdateData extends StatefulWidget {
@@ -103,7 +104,11 @@ class _UpdateDataState extends State<UpdateData> {
             AnimatedOutlineButton(
               onPressed: () {
                 updateData().then((_) {
-                  Navigator.pop(context); // Go back to LoadData page
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoadData(),
+                      )); // Go back to LoadData page
                 });
               },
               title: "UPDATE",

@@ -85,7 +85,7 @@ class _LoadDataState extends State<LoadData>
                 AnimatedOutlineButton(
                   title: 'UPDATE',
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (context) => const UpdateData(),
@@ -110,7 +110,7 @@ class _LoadDataState extends State<LoadData>
           ),
           AnimatedOutlineButton(
             onPressed: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const SaveData(),
